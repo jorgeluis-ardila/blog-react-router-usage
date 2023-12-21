@@ -1,0 +1,26 @@
+module.exports = {
+  root: true,
+  env: { browser: true, es2020: true },
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:react-hooks/recommended',
+  ],
+  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
+  settings: { react: { version: '18.2' } },
+  plugins: ['react-refresh'],
+  rules: {
+    allowConstantExport: true,
+    trailingComma: 'es5',
+    tabWidth: 2,
+    semi: true,
+    singleQuote: true,
+    arrowParens: 'avoid',
+    printWidth: 120,
+    parser: 'babel',
+    endOfLine: 'auto',
+    'react-refresh/only-export-components': ['warn'],
+  },
+};
